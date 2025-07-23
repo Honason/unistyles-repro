@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Text, View } from 'react-native';
 import Animated, {
   useAnimatedStyle,
   useSharedValue,
@@ -6,8 +7,6 @@ import Animated, {
   withSequence,
   withTiming,
 } from 'react-native-reanimated';
-
-import { Text } from 'react-native';
 import { StyleSheet } from 'react-native-unistyles';
 
 
@@ -32,6 +31,10 @@ export function HelloWave() {
     <Animated.View style={[animatedStyle, { backgroundColor: 'blue' }]}>
       <Text style={styles.text}>👋</Text>
     </Animated.View>
+    
+    <View style={styles.animatedHandStyle}>
+      <Text style={styles.text}>👋</Text>
+    </View>
     
     <Animated.View style={[animatedStyle, styles.animatedHandStyle]}>
       <Text style={styles.text}>👋</Text>
